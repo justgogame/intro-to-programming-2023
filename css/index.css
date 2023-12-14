@@ -1,0 +1,123 @@
+body {
+     background-color: rgb(251, 251, 252);
+     color: rgb(11, 11, 16);
+     display: flex;
+     flex-direction: column;
+     font-family: 'Inter', sans-serif;
+     font-size: 16px;
+     line-height: 1.5;
+}
+ .container {
+     padding: 1rem 0;
+     margin: 0 auto;
+     max-width: 1024px;
+     width: 90vw;
+}
+ .nav {
+     align-items: center;
+     display: flex;
+     justify-content: space-between;
+}
+ .image {
+     display: inline-block;
+     width: 70px;
+     border-radius: 50% 20% / 30% 20%;
+}
+ .menu {
+     display: flex;
+     align-items: center;
+}
+ .menu__item {
+     font-size: 1.125rem;
+}
+ .menu__item:not(:last-child) {
+     margin-right: 1rem;
+}
+ ul{
+     list-style-type: none;
+}
+ .link{
+     color: #050909;
+     position: relative;
+     cursor: pointer;
+     text-decoration: none;
+}
+ .link:after {
+     content: "";
+     display: block;
+     position: absolute;
+     right: 0;
+     bottom: -3px;
+     width: 0;
+     height: 2px;
+     background-color: black;
+     transition: width 0.5s;
+}
+ .link:hover:after {
+     content: "";
+     width: 100%;
+     display: block;
+     position: absolute;
+     left: 0;
+     bottom: -3px;
+     height: 2px;
+     background-color: rgb(80, 72, 72);
+     transition: width 0.5s;
+}
+ .tag {
+     border-radius: 50% 20% / 30% 20%;
+     border: 2px solid #0072e0;
+     color: #0072e0;
+     display: inline-block;
+     padding: 0.25rem 0.75rem;
+     margin-bottom: 0.5rem;
+}
+ .tag:not(:last-child) {
+     margin-right: 0.5rem;
+}
+ .card{
+     margin-bottom: 1rem;
+     background-color: #eae7ec;
+     color: #2b2b4a;
+     padding: 10px;
+     border-radius: 30px;
+     text-align: center;
+}
+ input, button, textarea, select {
+     font: inherit;
+}
+ .field {
+     display: block;
+     margin-bottom: 1rem;
+     max-width: 100%;
+     width: 32rem;
+}
+ .field--inline {
+     display: inline-block;
+     margin-right: 1rem;
+     width: 15.35rem;
+}
+ .field__label {
+     color: rgb(11, 11, 16);
+     font-weight: 530;
+     margin-bottom: 0.25rem;
+}
+ .field__input {
+     padding: 0.25rem 0.5rem;
+     width: 100%;
+}
+ .button {
+     background-color: #0072e0;
+     border-radius: 50% 20% / 30% 20%;
+     color: #ffff;
+     min-width: 100px;
+     padding: 0.8rem 1rem;
+     transition: opacity 0.2s ease-in-out;
+     border: none;
+     box-shadow: none;
+     cursor: pointer;
+}
+ *, *::before, *::after {
+     box-sizing: border-box;
+}
+ 

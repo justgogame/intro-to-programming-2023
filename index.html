@@ -1,40 +1,106 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> About me </title>
-        <meta charset="UTF-8">
-        <meta name="description" content="Personal Portfolio">
-        <meta name="keywords" content="HTML, CSS, JavaScript">
-        <meta name="author" content="Aleksandr Bogomolov">
-    </head>
-    <body>
-        <h1>Aleksandr Bogomolov</h1>
-        <section>
-            <h2>About</h2>
-            <p>Hey, i'm Alex! I am a student of Code The Dream school. I studied frontend development in Russia, but we were forced to emigrate and now I'm learning everything from the beginning in English. I'm happy to have the opportunity to learn programming and English at Code The Dream.</p>
-        </section>
-        <section>
-            <h2>Experience</h2>
-            <p>At the moment I have no experience in commercial or project development, but I have a couple of pet projects.<br>
-            I also had experience in interesting areas: </p>
-            <ul>
-                <li>2013 - 2020, Project Manager, Moscow</li>
-                <li>2020 - 2021, E-commerce Division Manager, Moscow</li>
-                <li>2021 - 2022, Marketplaces and Online Stores Manager, Moscow</li>
-            </ul>
-            <p>In 2022 we immigrated and now I work as a waiter in a restaurant.</p>
-        <section>
-            <h2>Connect</h2>
-            <ul>
-                <li>Phone number: +1(980)474-0844</li>
-                <li>GitHub: https://github.com/justgogame</li>
-            </ul>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul></ul>
-        </section>
-        <footer></footer>
-        <script src="js/index.js"></script>
-    </body>
+	<head>
+		<title> About me </title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Personal Portfolio">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="Aleksandr Bogomolov">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<nav class="nav">
+					<ul class="menu">
+						<li class="menu__item">
+							<img class="image" src="img/photo_2023-12-13 23.31.40.jpeg">
+						</li>
+						<li class="menu__item">
+							<a class="link strong" href="/">Aleksandr Bogomolov</a>
+						</li>
+					</ul>
+					<ul class="menu">
+						<li class="menu__item">
+							<a class="link" href="#about">About</a>
+						</li>
+						<li class="menu__item">
+							<a class="link" href="#skills">Skills</a>
+						</li>
+						<li class="menu__item">
+							<a class="link" href="#experience">Experience</a>
+						</li>
+						<li class="menu__item">
+							<a class="link" href="#projects">Projects</a>
+						</li>
+						<li class="menu__item">
+							<a class="link" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<div class="container">
+				<section id="about">
+					<h2 >About</h2>
+					<p>Hey, I'm Alex! I am a student of Code The Dream school. I studied front-end development in Russia, but we were forced to emigrate and now I'm learning everything from the beginning in English. I'm happy to have the opportunity to learn programming and English at Code The Dream.</p>
+				</section>
+				<section id="skills">
+					<h2>Skills</h2>
+					<ul></ul>
+				</section>
+				<section id="experience">
+					<h2>Experience</h2>
+					<ul>
+						<li class="card">2013 - 2020, Project Manager, Moscow</li>
+						<li class="card">2020 - 2021, E-commerce Division Manager, Moscow</li>
+						<li class="card">2021 - 2022, Marketplaces and Online Stores Manager, Moscow</li>
+					</ul>
+					<p>In 2022, we immigrated and now I work as a waiter in a restaurant.</p>
+				</section>
+				<section id="projects">
+					<h2>Projects</h2>
+					<ul>
+						<li class="card"><a class="link" href="https://github.com/justgogame/tic-tac-toe" target="_blank">Tic Tac Toe</a></li>
+						<li class="card"><a class="link" href="https://github.com/justgogame/game" target="_blank">Noname game</a></li>
+					</ul>
+					<br>
+				</section>
+				<section id="contact">
+					<h2>Contact</h2>
+					<ul>
+						<li>Phone number: +1(980)474-0844</li>
+						<li><a class="link" href="https://github.com/justgogame" target="_blank">GitHub</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Leave a Message</h2>
+					<form name="leave_message">
+						<div class="field field--inline">
+							<label class="field__label" name="usersName">Name</label>
+							<input class="field__input" type="text" name="usersName" required>
+						</div>
+						<div class="field field--inline">
+							<label class="field__label" name="usersEmail">Email</label>
+							<input class="field__input" type="email" name="usersEmail" required>
+						</div>
+						<div class="field">
+							<label class="field__label" name="usersMessage">Message</label>
+							<textarea class="field__input" name="usersMessage" required></textarea>
+						</div>
+						<button class="button" type="submit">Submit</button>
+					</form>
+				</section>
+				<section id="messages">
+					<h2>Messages</h2>
+					<ul id="messages_ul"></ul>
+				</section>
+			</div>
+		</main>
+		<footer>
+			<div class="container container__footer"></div>
+		</footer>
+		<script src="js/index.js"></script>
+	</body>
 </html>

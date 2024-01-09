@@ -7,6 +7,14 @@ body {
      font-size: 16px;
      line-height: 1.5;
 }
+
+ header {
+    background-color: rgb(251, 251, 252);
+    position: sticky;  
+    top: 0;  
+    z-index: 1;  
+    width: 100%;
+}
  .container {
      padding: 1rem 0;
      margin: 0 auto;
@@ -26,6 +34,7 @@ body {
  .menu {
      display: flex;
      align-items: center;
+     padding-left: 0;
 }
  .menu__item {
      font-size: 1.125rem;
@@ -36,7 +45,8 @@ body {
  ul{
      list-style-type: none;
 }
- .link{
+ .link,
+ .message__link{
      color: #050909;
      position: relative;
      cursor: pointer;
@@ -120,4 +130,20 @@ body {
  *, *::before, *::after {
      box-sizing: border-box;
 }
- 
+ #experience,
+ #projects,
+ .new__message{
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: column;
+ }
+
+#messages_ul span{
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .menu__mobile {
+    display: none;
+  }
+}

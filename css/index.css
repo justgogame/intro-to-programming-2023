@@ -142,8 +142,12 @@ body {
     font-style: italic;
 }
 
+#about, #skills,#experience, #projects, #contact {
+    scroll-margin-top: 150px;
+}
+
 @media (max-width: 768px) {
-  .menu__mobile {
+  .menu__mobile{
     display: none;
   }
 }

@@ -54,3 +54,18 @@ messageForm.addEventListener("submit", (e) => {
 
     messageForm.reset();
 })
+
+let githubRequest = new XMLHttpRequest();
+githubRequest.addEventListener("load", () => {
+    let repositories = JSON.parse(githubRequest.responseText);
+    console.log(repositories);
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');
+    for (let i = 0; i < repositories.length; i++) {
+        const project = document.createElement('li');
+        project.innerText = repositories[i].name;
+        projectList.appendChild(project);
+    }
+});
+githubRequest.open('GET', 'https://api.github.com/users/justgogame/repos');
+githubRequest.send();

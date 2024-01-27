@@ -55,17 +55,21 @@ messageForm.addEventListener("submit", (e) => {
     messageForm.reset();
 })
 
-let githubRequest = new XMLHttpRequest();
-githubRequest.addEventListener("load", () => {
-    let repositories = JSON.parse(githubRequest.responseText);
-    console.log(repositories);
-    const projectSection = document.getElementById('projects');
-    const projectList = projectSection.querySelector('ul');
-    for (let i = 0; i < repositories.length; i++) {
-        const project = document.createElement('li');
-        project.innerText = repositories[i].name;
-        projectList.appendChild(project);
-    }
-});
-githubRequest.open('GET', 'https://api.github.com/users/justgogame/repos');
-githubRequest.send();
+
+fetch('https://api.github.com/users/justgogame/repos')
+    .then((response) => response.json())
+    .then((data) => {
+        const filteredData = data.filter((repo) =>
+            !repo.name.includes('intro-')
+        )
+
+        const projectSection = document.querySelector('#projects')
+        const projectList = projectSection.querySelector('ul')
+
+        for (let i = 0; i < filteredData.length; i++) {
+            const project = document.createElement('li')
+            project.innerHTML = `<a class='link_card' href="${filteredData[i].html_url}">${filteredData[i].name}</a>`
+            projectList.appendChild(project)
+        }
+    })
+    .catch(error => console.log('There was a problem!', error));

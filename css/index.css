@@ -149,6 +149,20 @@ body {
     scroll-margin-top: 150px;
 }
 
+.container__footer{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+footer{
+    background-color: #eae7ec;
+}
+
+.image_footer{
+        width: 45px;
+    border-radius: 50px;
+    margin: 6px;
+}
 
 @media (max-width: 768px) {
     .menu__mobile{

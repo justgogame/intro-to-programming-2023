@@ -2,9 +2,8 @@ const today = new Date();
 const thisYear = today.getFullYear();
 
 
-const copyright = document.createElement('p');
-copyright.innerHTML = `© Aleksandr Bogomolov ${thisYear}`;
-document.querySelector('.container__footer').appendChild(copyright);
+const copyright = document.querySelector('.copyright');
+copyright.innerText = `© Aleksandr Bogomolov ${thisYear}`;
 
 const skills = ['Digital Marketing', 'IT Project Management', 'HTML', 'CSS', 'Java Script', 'Front-end', 'Computer Skills'];
 const skillsSection = document.querySelector('#skills');
